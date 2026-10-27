@@ -1,0 +1,92 @@
+{
+  "catalogue_name": "Curated Enterprise ATT&CK technique catalogue",
+  "attack_version": "15.1",
+  "attack_release_family": "15",
+  "domain": "enterprise-attack",
+  "source_url": "https://github.com/mitre-attack/attack-stix-data/blob/v15.1/enterprise-attack/enterprise-attack.json",
+  "retrieved_date": "2026-10-27",
+  "provenance": "Technique IDs, names, tactics, and parent relationships in this exercise subset were checked against the official MITRE ATT&CK Enterprise STIX release tagged v15.1. Descriptions are concise educational summaries, not a copy of the complete STIX catalogue.",
+  "records": [
+    {
+      "technique_id": "T1566",
+      "name": "Phishing",
+      "tactics": ["initial-access"],
+      "description": "Adversaries may send phishing messages to gain access to victim systems. A message being received alone does not establish phishing or user interaction.",
+      "is_subtechnique": false,
+      "parent_id": null,
+      "url": "https://attack.mitre.org/techniques/T1566"
+    },
+    {
+      "technique_id": "T1059",
+      "name": "Command and Scripting Interpreter",
+      "tactics": ["execution"],
+      "description": "Adversaries may abuse command and script interpreters to execute commands, scripts, or binaries.",
+      "is_subtechnique": false,
+      "parent_id": null,
+      "url": "https://attack.mitre.org/techniques/T1059"
+    },
+    {
+      "technique_id": "T1059.001",
+      "name": "PowerShell",
+      "tactics": ["execution"],
+      "description": "Adversaries may abuse PowerShell commands and scripts for execution. A process observation alone does not establish malicious use.",
+      "is_subtechnique": true,
+      "parent_id": "T1059",
+      "url": "https://attack.mitre.org/techniques/T1059/001"
+    },
+    {
+      "technique_id": "T1057",
+      "name": "Process Discovery",
+      "tactics": ["discovery"],
+      "description": "Adversaries may attempt to get information about running processes on a system.",
+      "is_subtechnique": false,
+      "parent_id": null,
+      "url": "https://attack.mitre.org/techniques/T1057"
+    },
+    {
+      "technique_id": "T1518.001",
+      "name": "Security Software Discovery",
+      "tactics": ["discovery"],
+      "description": "Adversaries may attempt to list security software, configurations, defensive tools, and sensors installed on a system or cloud environment.",
+      "is_subtechnique": true,
+      "parent_id": "T1518",
+      "url": "https://attack.mitre.org/techniques/T1518/001"
+    },
+    {
+      "technique_id": "T1518",
+      "name": "Software Discovery",
+      "tactics": ["discovery"],
+      "description": "Adversaries may attempt to list software and software versions installed on a system or in a cloud environment.",
+      "is_subtechnique": false,
+      "parent_id": null,
+      "url": "https://attack.mitre.org/techniques/T1518"
+    },
+    {
+      "technique_id": "T1082",
+      "name": "System Information Discovery",
+      "tactics": ["discovery"],
+      "description": "An adversary may attempt to collect detailed information about the operating system and hardware.",
+      "is_subtechnique": false,
+      "parent_id": null,
+      "url": "https://attack.mitre.org/techniques/T1082"
+    },
+    {
+      "technique_id": "T1078",
+      "name": "Valid Accounts",
+      "tactics": ["defense-evasion", "persistence", "privilege-escalation", "initial-access"],
+      "description": "Adversaries may obtain and abuse credentials for existing accounts. An unfamiliar successful sign-in alone is insufficient to establish credential abuse.",
+      "is_subtechnique": false,
+      "parent_id": null,
+      "url": "https://attack.mitre.org/techniques/T1078"
+    },
+    {
+      "technique_id": "T1078.004",
+      "name": "Cloud Accounts",
+      "tactics": ["defense-evasion", "persistence", "privilege-escalation", "initial-access"],
+      "description": "Valid accounts in cloud environments may be used to achieve initial access, persistence, privilege escalation, or defense evasion.",
+      "is_subtechnique": true,
+      "parent_id": "T1078",
+      "url": "https://attack.mitre.org/techniques/T1078/004"
+    }
+  ]
+}

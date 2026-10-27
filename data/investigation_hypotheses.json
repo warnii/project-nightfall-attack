@@ -1,0 +1,64 @@
+{
+  "hypotheses": [
+    {
+      "hypothesis_id": "H-01",
+      "question": "Was the unfamiliar sign-in consistent with legitimate employee activity?",
+      "supporting_observations": ["E-02", "E-08"],
+      "contradicting_evidence": "Verified employee denial, an unmanaged device, failed MFA followed by a session, or impossible-travel/session evidence would weaken the legitimate-activity explanation.",
+      "data_sources": ["Identity sign-in logs", "MFA records", "Device registration and posture", "Employee confirmation"],
+      "procedure": "Compare session identifiers, device and MFA context, source network, and verified user activity. Do not infer identity from geographic labels alone.",
+      "findings": "",
+      "conclusion": "",
+      "confidence": 0,
+      "next_action": "Request the synthetic identity context and user confirmation for the exercise."
+    },
+    {
+      "hypothesis_id": "H-02",
+      "question": "Did the office application's child process execute an interpreter, and what explains the process chain?",
+      "supporting_observations": ["E-03", "E-07"],
+      "contradicting_evidence": "A verified, signed, approved add-in or management workflow with matching historical process ancestry would support a benign explanation.",
+      "data_sources": ["Endpoint process creation", "Office add-in inventory", "File signer and hash reputation", "Endpoint management history"],
+      "procedure": "Validate parent and child process identifiers, signer, image path, user context, and approved software inventory. Inspect arguments only as inert evidence; never execute them.",
+      "findings": "",
+      "conclusion": "",
+      "confidence": 0,
+      "next_action": "Compare the process chain to known-good office add-ins and prior endpoint records."
+    },
+    {
+      "hypothesis_id": "H-03",
+      "question": "Which process and system details were enumerated, and was the behavior routine?",
+      "supporting_observations": ["E-04", "E-07", "E-10"],
+      "contradicting_evidence": "A matching scheduled inventory task with the same executable identity and cadence would favor routine collection.",
+      "data_sources": ["Endpoint process telemetry", "Software inventory agent logs", "Historical endpoint baseline"],
+      "procedure": "Correlate process IDs, executable identity, task schedules, and prior-day baseline. Separate process listing from installed-security-product listing.",
+      "findings": "",
+      "conclusion": "",
+      "confidence": 0,
+      "next_action": "Obtain inventory-agent execution history and raw endpoint events."
+    },
+    {
+      "hypothesis_id": "H-04",
+      "question": "Was sensitive information accessed, and was the access expected?",
+      "supporting_observations": ["E-05"],
+      "contradicting_evidence": "Document classification, approved business context, and a matching employee explanation could support expected access.",
+      "data_sources": ["Document audit logs", "Data classification metadata", "Business calendar and approvals", "Employee interview"],
+      "procedure": "Determine whether the documents were viewed, downloaded, or shared; compare access to job duties and approved work.",
+      "findings": "",
+      "conclusion": "",
+      "confidence": 0,
+      "next_action": "Review document labels and access/download audit detail."
+    },
+    {
+      "hypothesis_id": "H-05",
+      "question": "Did the outbound transfer contain organisational data, and which process initiated it?",
+      "supporting_observations": ["E-06", "E-09"],
+      "contradicting_evidence": "A verified approved application, expected destination, and non-sensitive transfer content would weaken an exfiltration hypothesis.",
+      "data_sources": ["Proxy and DNS logs", "Endpoint network-to-process telemetry", "DLP or content metadata", "Destination ownership and certificate records"],
+      "procedure": "Correlate the transfer to a process and destination, validate business purpose, and review permitted content metadata. Do not claim exfiltration without evidence of data content and unauthorized transfer.",
+      "findings": "",
+      "conclusion": "",
+      "confidence": 0,
+      "next_action": "Acquire process-to-connection attribution and DLP/proxy context."
+    }
+  ]
+}
